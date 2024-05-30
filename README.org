@@ -1,0 +1,24 @@
+* lab 01: segment display
+
+Second lab that I did in hackespace.
+
+Assembly project created in Atmel Studio and flashed on Atmega16 on
+Pinboard2 Rev 2. It used one of the atmega timers, and port d to
+supply data into 7seg display. 
+
+[[https://github.com/artsi0m/INC_SEG_LED_ASM_UNIX][Port to GNU avr-as]]
+
+** Table of MCU frequency, OCR1A value and fusebits for avrdude
+
+OCR1A — output control register for timer counter 1.
+
+| freq  |   dec |    hex | fusebits (xHL) |
+| 8 Mhz | 31250 | 0x7A12 |         0xE4D9 |
+| 2 Mhz |  7813 | 0x1E85 |         0xE2D9 |
+| 1 Mhz |  3907 | 0x0C19 |         0xE1D9 |
+
+How to calculate:
+1. 256 / freq = x
+2. 1 / x = res
+3. Round and convert to hex
+
