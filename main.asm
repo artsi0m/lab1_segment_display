@@ -64,8 +64,6 @@ RESET:
 	out TIMSK, r16
 
 	; Setting TCNT1 TOP to OCR1A value
-	;; 31250 = 0x7A12
-
 	ldi r16, 0x0C
 	out OCR1AH, r16
 	ldi r16, 0x19
